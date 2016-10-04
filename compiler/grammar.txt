@@ -1,0 +1,28 @@
+integer       =  digit, {digit} ;
+identifier    =  (letter | '_'), { (letter | digit | '_') } ;
+type          =  'void' | 'int' ;
+num_op        =  '+' | '-' | '*' | '/' | '%' ;
+bool_op       =  '==' | '!=' | '>' | '<' | '<=' | '>=' ;
+fcall_arglist =  [expression, ',', [fcall_arglist]] ;
+fcall         =  identifier, '(', fcall_arg_arglist, ')' ;
+expression    =  (fcall 
+                   | identifier
+                   | ['-'], integer 
+                   | '(', expression, ')'), [num_op, expression] ;
+var_def       =  type, identifier, ['=', expression] ;
+var_assign    =  identifier '=' expression ;
+print         =  'print', expression ;
+return        =  'return', [expression] ;
+cond          =  expression, bool_op, expression ;
+branch        =  'if', '(', cond, ')', '{', sequence, '}',
+                   ['else', '{', sequence, '}'] ;
+loop_head     =  (var_def | var_assign), cond, var_assign ;
+loop          =  'while', '(', cond, ')', '{', sequence, '}'
+                   | 'for', '(', loop_head, ')', '{', sequence, '}'
+                   | 'do', '{', sequence, '}', 'while', '(', cond, ')', ';' ;
+statement     =  (var_def | var_assign | fcall | print | return) ';' ;
+sequence      =  (statement | branch | loop), [sequence] ;
+argdef        =  type | identifier ;
+arglist       =  argdef, [',', arglist] | 'void' ;
+func          =  type, identifier, '(', arglist, ')', ('{', sequence, '}' | ';') ;
+program       =  [func, program] ;

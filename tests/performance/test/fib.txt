@@ -1,0 +1,4 @@
+./bispe --instr-per-cycle=2000 scll/fib.scle
+c/fib 35
+java Fib 35
+python/fib.py 35

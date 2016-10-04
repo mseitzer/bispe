@@ -1,0 +1,14 @@
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=10 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=15 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=20 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=25 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=50 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=75 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=100 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=250 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=500 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=750 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=1000 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=2500 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=5000 scll/fib.scle
+../../bin/bispe --call-size=30 --stack-size=30 --instr-per-cycle=7500 scll/fib.scle

@@ -1,0 +1,4 @@
+./bispe --instr-per-cycle=2000 scll/pascal.scle
+c/pascal 23
+java Pascal 23
+python/pascal.py 23

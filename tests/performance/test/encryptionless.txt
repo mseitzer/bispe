@@ -1,0 +1,3 @@
+./bispe --instr-per-cycle=2000 scll/fib.sclu
+./bispe --instr-per-cycle=2000 scll/primes.sclu
+./bispe --instr-per-cycle=2000 scll/pascal.sclu

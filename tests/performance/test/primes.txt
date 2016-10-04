@@ -1,0 +1,4 @@
+./bispe --instr-per-cycle=2000 scll/primes.scle
+c/primes 1000000
+java Fib 1000000
+python/primes.py 1000000

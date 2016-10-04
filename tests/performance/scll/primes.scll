@@ -1,0 +1,19 @@
+void print_prime(int p) {
+	if(p % 2 == 0) {
+		return;
+	}
+
+	for(int i = 3; i * i <= p; i = i + 2) {
+		if(p % i == 0) {
+			return;
+		}
+	}
+	print p;
+}
+
+void main(void) {
+	int max_prime = 1000000;
+	for(int i = 2; i <= max_prime; i = i + 1) {
+		print_prime(i);
+	}
+}
