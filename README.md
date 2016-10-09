@@ -1,6 +1,6 @@
 # A Bytecode Interpreter for Secure Program Execution in Untrusted Main Memory
 
-Bispe is a bytecode interpreter which protects executed programs against physical attacks on memory such as Coldboot or DMA attacks.
+Bispe is a bytecode interpreter which protects executed programs against physical attacks on memory such as [Coldboot](https://en.wikipedia.org/wiki/Cold_boot_attack) or [DMA attacks](https://en.wikipedia.org/wiki/DMA_attack).
 To this end, the interpreter encrypts all code and data of executed programs, holding them in the clear only in CPU registers. 
 As a secure implementation of this idea requires deep system access, Bispe is devised as a Linux kernel module. 
 Bispe is built on [TRESOR](https://www1.cs.fau.de/tresor), a memory attack resistant implementation of AES which is used to setup secure full disk encryption. In particular, TRESOR holds the used encryption key in the debug registers, i.e. not in vulnerable RAM.
